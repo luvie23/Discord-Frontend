@@ -5,9 +5,9 @@ import RightSidebar from "./RightSidebar";
 
 const Chatbox = () => {
     return (
-        <div className="bg-[#35383E] w-full">
+        <div className="bg-[#35383E] w-full h-screen flex flex-col">
             <ChatboxNavbar />
-            <div className="flex">
+            <div className="flex h-full">
                 <Chat />
                 <RightSidebar />
             </div>

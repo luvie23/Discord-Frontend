@@ -1,14 +1,13 @@
 import Sidebar from './components/Sidebar'
 import Main from './components/Main';
-import Chatbox from './components/Chatbox'
+
 
 function App() {
   return (
     <>
-      <div className='flex bg-[#202226]'>
+      <div className='flex bg-[#202226] h-screen'>
         <Sidebar/>
         <Main/>
-        <Chatbox />
       </div>
       
     </>
