@@ -7,7 +7,7 @@ const Main = (props) => {
     return (
         <div className="flex w-full h-full">
             <MainSidebar name={server.name} image={server.image} channels={server.channels}/>
-            <Chatbox/>
+            <Chatbox server={server}/>
         </div>
     )
 }

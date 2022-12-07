@@ -13,6 +13,14 @@ let servers = [
                     {name: 'Filipino'},
                     {name: 'Indian'}
                 ]
+            },
+
+            {
+                name: 'Cool Music',
+                subchannels: [
+                    {name: 'Rock'},
+                    {name: 'HipHop'}
+                ]
             }
 
         ]
