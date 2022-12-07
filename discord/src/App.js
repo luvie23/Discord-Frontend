@@ -11,14 +11,14 @@ function App() {
 
   const handleClick = (index) =>{
     setSelectedServer(serverList[index])
-    console.log(serverList[index])
+    console.log(selectedServer)
   }
 
   return (
     <>
       <div className='flex bg-[#202226] h-screen'>
         <Sidebar handleClick={handleClick}/>
-        <Main/>
+        <Main server={selectedServer}/>
       </div>
       
     </>

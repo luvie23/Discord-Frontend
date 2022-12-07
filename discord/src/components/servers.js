@@ -1,4 +1,5 @@
 import coolServerImage from '../assets/serverphotos/coolserver.jpg'
+import videoGameServerImage from '../assets/serverphotos/videogamesserver.jpg'
 
 let servers = [
     {
@@ -6,7 +7,27 @@ let servers = [
         id: '1',
         image: coolServerImage,
         channels: [
-            {name: 'Cool Food'}
+            {
+                name: 'Cool Food',
+                subchannels: [
+                    {name: 'Filipino'},
+                    {name: 'Indian'}
+                ]
+            }
+
+        ]
+    },
+    {
+        name: 'VideoGames',
+        id: '2',
+        image: videoGameServerImage,
+        channels: [
+            {name: 'PC Games',
+            subchannels: [
+                {name: 'MMO'},
+                {name: 'Single Player'}
+            ]
+        }
         ]
     }
 ]
