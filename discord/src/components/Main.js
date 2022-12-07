@@ -6,7 +6,7 @@ const Main = (props) => {
     let server = props.server
     return (
         <div className="flex w-full h-full">
-            <MainSidebar name={server.name} image={server.image}/>
+            <MainSidebar name={server.name} image={server.image} channels={server.channels}/>
             <Chatbox/>
         </div>
     )
