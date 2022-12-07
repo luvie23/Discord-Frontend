@@ -1,6 +1,7 @@
 import React from "react";
 import { BsChevronDown } from "react-icons/bs"
 import Channel from './Channel'
+import Subchannel from './Subchannel'
 
 const MainSidebar = (props) => {
     let bgImg = props.image
@@ -11,7 +12,12 @@ const MainSidebar = (props) => {
             </div>
             <div className="mt-2">
                 {props.channels.map(channel => (
-                    <Channel key={channel.name} name={channel.name.toUpperCase()}/>
+                    <div key={channel.name}>
+                        <Channel key={channel.name} name={channel.name}/> 
+                        {channel.subchannels.map(subchannel => (
+                            <Subchannel name={subchannel.name}/>
+                        ))}
+                    </div>
                 ))}
             </div>
                 
