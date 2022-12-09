@@ -24,12 +24,18 @@ function App() {
     setServerList(serverList.concat(server))
   }
 
+  const toggleForm = () =>{
+    setShowForm(!showForm)
+    console.log(showForm)
+  }
+
   return (
     <>
       <div className='flex bg-[#202226] h-screen'>
-        <Sidebar  servers={serverList} handleClick={handleClick}/>
+        <Sidebar  servers={serverList} handleClick={handleClick} toggleForm={toggleForm}/>
         <Main server={selectedServer}/>
-        <ServerForm createServer={createServer}/>
+        { showForm ? <ServerForm createServer={createServer} /> : null}
+        
       </div>
       
     </>

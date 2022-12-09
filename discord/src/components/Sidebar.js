@@ -21,7 +21,7 @@ const Sidebar = (props) => {
                 <Server key={server.id}serverImage={server.image} name={server.name} handleClick={() => {props.handleClick(index)}}/>
             ))}
             <div>
-                <BsPlus  color="#59B287" className="bg-[#2E3235] rounded-full h-10 w-10 hover:cursor-pointer" />
+                <BsPlus  color="#59B287" className="bg-[#2E3235] rounded-full h-10 w-10 hover:cursor-pointer" onClick={() => props.toggleForm()}/>
             </div>
             
         </div>
