@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <div className='flex bg-[#202226] h-screen'>
-        <Sidebar handleClick={handleClick}/>
+        <Sidebar servers={serverList} handleClick={handleClick}/>
         <Main server={selectedServer}/>
       </div>
       
