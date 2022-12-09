@@ -5,14 +5,17 @@ const ServerForm = (props) => {
     const [channel1, setChannel1] = useState('')
     const [channel2, setChannel2] = useState('')
     const [channel3, setChannel3] = useState('')
-    const [channels, setChannels] = useState([])
+
+    let channels = []
 
     const inputChangeHandler = (setFunction, event) => {
         setFunction(event.target.value)
     }
 
 
-
+    const generateId = () => {
+        return Math.floor(1000 + Math.random() * 9000)
+    }
     const handleSubmit = (event) => {
         event.preventDefault()
         if (!serverName) {
@@ -20,11 +23,18 @@ const ServerForm = (props) => {
             return
         }
         if (channel1){
-            setChannels(channels.concat(channel1))
+            let prop1 = {name:channel1, subchannels: [{name: channel1 + '#' + generateId()}]}
+            channels.push(prop1)
 
         }
         if (channel2){
-            setChannels(channels.concat(channel2))
+            let prop2 = {name:channel2, subchannels: [{name:channel2 + '#' + generateId()}]}
+            channels.push(prop2)
+
+        }
+        if (channel3){
+            let prop3 = {name:channel3, subchannels: [{name:channel3 + '#' + generateId()}]}
+            channels.push(prop3)
 
         }
 
