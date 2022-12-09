@@ -1,6 +1,8 @@
 import coolServerImage from '../assets/serverphotos/coolserver.jpg'
 import videoGameServerImage from '../assets/serverphotos/videogamesserver.jpg'
 
+import defaultImage from '../assets/default.svg'
+
 let servers = [
     {
         name: 'Cool Server',

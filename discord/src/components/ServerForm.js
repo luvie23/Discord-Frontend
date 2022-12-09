@@ -1,4 +1,5 @@
 import {React, useState} from "react";
+import defaultImage from '../assets/default.svg'
 
 const ServerForm = (props) => {
     const [serverName, setServerName] = useState('')
@@ -39,7 +40,7 @@ const ServerForm = (props) => {
         }
 
         
-        props.createServer({name: serverName, channels: channels})
+        props.createServer({name: serverName,image: defaultImage, channels: channels})
         console.log(channels)
     }
 
